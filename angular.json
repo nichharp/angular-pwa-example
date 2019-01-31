@@ -23,8 +23,21 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "assets"
+              },
+              {
+                "glob": "dexie.min.js",
+                "input": "node_modules/dexie/dist/",
+                "output": "./"
+              },
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.json",
+              "src/sw-master.js",
+              "src/sw-sync.js"
             ],
             "styles": [
               "src/styles.scss"
@@ -54,7 +67,8 @@
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
                 }
-              ]
+              ],
+              "serviceWorker": true
             }
           }
         },
@@ -87,8 +101,21 @@
             ],
             "scripts": [],
             "assets": [
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "assets"
+              },
+              {
+                "glob": "dexie.min.js",
+                "input": "node_modules/dexie/dist/",
+                "output": "./"
+              },
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.json",
+              "src/sw-master.js",
+              "src/sw-sync.js"
             ]
           }
         },

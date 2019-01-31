@@ -1,0 +1,26 @@
+<h1>Post to somewhere</h1>
+
+<form *ngIf="!submitted" #ngForm (ngSubmit)="sendOff()">
+  <div class="form-group">
+    <label for="msg">Type the msg here:</label>
+    <input #msg="ngModel" [(ngModel)]="model.msg" type="text" name="msg" id="msg" required="">
+  </div>
+
+  <button type="submit">Submit</button>
+</form>
+
+<div *ngIf="submitted">
+  <div *ngIf="!error">
+    <h2>Nice! That sent</h2>
+  </div>
+  <div *ngIf="error">
+    <h2>Ooops, that failed. But don't worry, we'll send it when you're back online</h2>
+  </div>
+  <button (click)="submitted=false">Send Another?</button>
+</div>
+<i id="error">
+  {{errorData}}
+</i>
+<i id="sync">
+
+</i>

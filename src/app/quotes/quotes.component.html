@@ -1,0 +1,12 @@
+<h1 style="margin-bottom: 100px;">
+  Hey There!
+</h1>
+<button (click)="requestQuote()">Click Here to get a quote</button>
+
+<div *ngIf="quoteData">
+  <h2>{{quoteData['value']}}</h2>
+  <!--<h3>Author: {{quoteData['author']}}</h3>-->
+  <!--<h3>Tags:</h3>-->
+  <!--<h4 *ngFor="let tag of quoteData['tags']">: {{tag}}</h4>-->
+</div>
+
